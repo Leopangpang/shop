@@ -1,0 +1,65 @@
+@media (min-width: 320px) {
+	html {font-size: 62.5%;}
+}
+@media (min-width: 360px) {
+	html {font-size: 75%;}
+}
+@media (min-width: 384px) {
+	html {font-size: 87.5%;}
+}
+@media (min-width: 400px) {
+	html {font-size: 100%;}
+}
+@media (min-width: 540px) {
+	html {font-size: 112.5%;}
+}
+@media (min-width: 600px) {
+	html {font-size: 125%;}
+}
+@media (min-width: 640px) {
+	html {font-size: 137.5%;}
+}
+@media (min-width: 720px) {
+	html {font-size: 150%;}
+}
+@media (min-width: 768px) {
+	html {font-size: 162.5%;}
+}
+html {
+	/* font-size: calc(100vw / 320 * 16); */
+    font-size: calc(100vw / 375 * 12);
+    font-family: Calibri, sans-serif;
+}
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a,img,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label,
+table, tbody, tfoot, thead, tr, th, td,
+footer, header,
+menu, nav,section {
+    margin: 0;
+    padding: 0;
+}
+
+.shop-bold-font{
+    font:bold;
+}
+/* 清除浮动 */
+.clearfloat:after{
+    display: block;
+    clear:both;
+    content: '';
+    visibility: hidden;
+    height: 0;
+}
+.clearfloat{
+    zoom:1;  
+}
+.basic-blue-color{
+    color:#255288;
+}
+.basic-orange-color{
+    color:#feae54;
+}
