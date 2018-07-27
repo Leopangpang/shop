@@ -62,7 +62,8 @@
            <i class="shopIcon shop-shuangjiantou-right-bold"></i>
          </p>
       </div>
-
+      <!-- 推荐区域 -->
+      <div class="index-section recommend-section"></div>
     </div>
 </template>
 
