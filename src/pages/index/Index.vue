@@ -107,11 +107,17 @@ export default{
     padding: 0.5rem 0;
     position: relative;
     >p{
-      bottom: 0;
+      bottom:0.1rem;
       right: 2%;
-      margin-top: 0.5rem;
       display: inline-block;
       position: absolute;
+      color: #9E9E9E;
+      span{
+        display: inline-block;
+      }
+      i{
+        vertical-align: middle;
+      }
     }
   }
   // 介绍区域
@@ -125,11 +131,11 @@ export default{
           width:25%;
           text-align: center;
           i{
-            font-size: 2.5rem;
+            font-size: 4rem;
           }
           span{
             display: block;
-            font-size: 0.9rem;
+            font-size: 1.7rem;
             padding-top:0.2rem;
           }
         }
@@ -147,6 +153,9 @@ export default{
           img{
             width:100%;
             border-radius: 0.5rem;
+            box-shadow: -0.1rem 0.1rem 0.2rem #999999;
+            -moz-box-shadow: -0.1rem 0.1rem 0.2rem #999999;
+            -webkit-box-shadow: -0.1rem 0.1rem 0.2rem #999999;
           }
         }
         .ibi-left{

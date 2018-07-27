@@ -1,3 +1,8 @@
+html, body, div, span,h1, h2, h3, h4, h5, h6, p,a,img,b, u, i, center,dl, dt, dd, ol, ul, li,form, label,table, tbody, tfoot, thead, tr, th, td,footer, header,menu, nav,section {
+    margin: 0;
+    padding: 0;
+}
+
 @media (min-width: 320px) {
 	html {font-size: 62.5%;}
 }
@@ -26,25 +31,19 @@
 	html {font-size: 162.5%;}
 }
 html {
-	/* font-size: calc(100vw / 320 * 16); */
-    font-size: calc(100vw / 375 * 12);
+	/* font-size: calc(100vw / 375 * 10);代表设备宽度为375时候，页面10px = 1rem */
+    font-size: calc(100vw / 375 * 10);
     font-family: Calibri, sans-serif;
-}
-html, body, div, span,
-h1, h2, h3, h4, h5, h6, p,
-a,img,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-form, label,
-table, tbody, tfoot, thead, tr, th, td,
-footer, header,
-menu, nav,section {
-    margin: 0;
-    padding: 0;
 }
 
 .shop-bold-font{
     font:bold;
+}
+/* 阴影部分兼容 向右 向下的阴影*/
+.border-shadow{
+    box-shadow: 0.1rem 0.1rem 0.2rem #999999;
+    -moz-box-shadow: 0.1rem 0.1rem 0.2rem #999999;
+    -webkit-box-shadow: 0.1rem 0.1rem 0.2rem #999999;
 }
 /* 清除浮动 */
 .clearfloat:after{
