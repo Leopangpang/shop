@@ -63,7 +63,20 @@
          </p>
       </div>
       <!-- 推荐区域 -->
-      <div class="index-section recommend-section"></div>
+      <div class="index-section recommend-section">
+        <span class="title">
+          Recommend
+        </span>
+        <div class="content clearfloat">
+          <div class="product-item">
+            <img src="../../assets/images/intro1.jpg"/>
+          </div>
+
+          <div class="product-item">
+            <img src="../../assets/images/intro1.jpg"/>
+          </div>
+        </div>
+      </div>
     </div>
 </template>
 
@@ -105,11 +118,20 @@ export default{
     }
   }
   .index-section{
-    padding: 0.5rem 0;
+    padding: 0 3%;
     position: relative;
+    .title{
+      font-size: 1.4rem;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .content{
+      width:100%;
+    }
+    // more >>区域
     >p{
-      bottom:0.1rem;
-      right: 2%;
+      bottom: -0.1rem;
+      right: 3%;
       display: inline-block;
       position: absolute;
       color: #9E9E9E;
@@ -117,12 +139,14 @@ export default{
         display: inline-block;
       }
       i{
+        font-size: 1.2rem;
         vertical-align: middle;
       }
     }
   }
   // 介绍区域
   .introduce-section{
+    padding-top: 0.5rem;
     .is-top{
       overflow: hidden;
       padding-top:0.5rem;
@@ -136,7 +160,7 @@ export default{
           }
           span{
             display: block;
-            font-size: 1.7rem;
+            font-size: 1.3rem;
             padding-top:0.2rem;
           }
         }
@@ -147,7 +171,6 @@ export default{
       .ib-item{
         font-size: 0;
         margin-bottom: 0.5rem;
-        padding:0 2%;
         .ibi-img{
           width:49%;
           display: inline-block;
@@ -162,6 +185,26 @@ export default{
         .ibi-left{
           margin-right:2%;
         }
+      }
+    }
+  }
+  // 推荐区域
+  .recommend-section{
+    .content{
+      font-size: 0;
+      .product-item{
+        width: 48%;
+        float: left;
+        border-radius: 0.5rem;
+        border: 1px solid #e5e5e5;
+        img{
+          width: 60%;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+      .product-item:nth-child(odd){
+        margin-right: 2%;
       }
     }
   }

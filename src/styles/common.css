@@ -32,7 +32,7 @@ html, body, div, span,h1, h2, h3, h4, h5, h6, p,a,img,b, u, i, center,dl, dt, dd
 }
 html {
 	/* font-size: calc(100vw / 375 * 10);代表设备宽度为375时候，页面10px = 1rem */
-    font-size: calc(100vw / 375 * 10);
+    font-size: calc(100vw / 375 * 12);
     font-family: Calibri, sans-serif;
 }
 
