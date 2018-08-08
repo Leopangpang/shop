@@ -70,10 +70,63 @@
         <div class="content clearfloat">
           <div class="product-item">
             <img src="../../assets/images/intro1.jpg"/>
+            <div class="product-detail">
+              <p class="product-name">男式手表</p>
+              <span class="product-account">account</span>
+              <p class="product-price">
+                <span class="new-price"><i>$</i>34.00</span>
+                <span class="old-price"><i>$</i>99.00</span>
+              </p>
+              <i class="shopIcon shop-gouwuche"></i>
+            </div>
           </div>
-
           <div class="product-item">
             <img src="../../assets/images/intro1.jpg"/>
+            <div class="product-detail">
+              <p class="product-name">男式手表</p>
+              <span class="product-account">account</span>
+              <p class="product-price">
+                <span class="new-price"><i>$</i>34.00</span>
+                <span class="old-price"><i>$</i>99.00</span>
+              </p>
+              <i class="shopIcon shop-gouwuche"></i>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="../../assets/images/intro1.jpg"/>
+            <div class="product-detail">
+              <p class="product-name">男式手表</p>
+              <span class="product-account">account</span>
+              <p class="product-price">
+                <span class="new-price"><i>$</i>34.00</span>
+                <span class="old-price"><i>$</i>99.00</span>
+              </p>
+              <i class="shopIcon shop-gouwuche"></i>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="../../assets/images/intro1.jpg"/>
+            <div class="product-detail">
+              <p class="product-name">男式手表</p>
+              <span class="product-account">account</span>
+              <p class="product-price">
+                <span class="new-price"><i>$</i>34.00</span>
+                <span class="old-price"><i>$</i>99.00</span>
+              </p>
+              <i class="shopIcon shop-gouwuche"></i>
+            </div>
+          </div>
+          <div class="product-item">
+            <img src="../../assets/images/intro1.jpg"/>
+            <div class="product-detail">
+              <p class="product-name">男式手表</p>
+              <span class="product-account">account</span>
+              <p class="product-price">
+                <span class="new-price"><i>$</i>34.00</span>
+                <span class="old-price"><i>$</i>99.00</span>
+              </p>
+              <i class="shopIcon shop-gouwuche"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -191,16 +244,55 @@ export default{
   // 推荐区域
   .recommend-section{
     .content{
-      font-size: 0;
       .product-item{
-        width: 48%;
+        width: 49%;
         float: left;
+        box-sizing: border-box;
         border-radius: 0.5rem;
+        margin-bottom: 3%;
         border: 1px solid #e5e5e5;
         img{
           width: 60%;
           margin: 0 auto;
           display: block;
+        }
+        .product-detail{
+          position: relative;
+          margin: 0 3.5% 5% 3.5%;
+          >i{
+              right: 0;
+              bottom: 0;
+              font-size:1.2rem;
+              position: absolute;
+            }
+          .product-name{
+            font-size: 1.2rem;
+            line-height: 1.3rem;
+            padding-top: 0.2rem;
+          }
+          .product-account{
+            font-size: 1.1rem;
+            line-height: 1.1rem;
+            display: inherit;
+            color: #d5d5d5;
+          }
+          .product-price{
+            margin-top: 0.9rem;
+            i{
+              margin-right: 0.15rem;
+            }
+            .new-price{
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            }
+            .old-price{
+              font-size: 1.1rem;
+              line-height: 1.1rem;
+              color: #999999;
+              text-decoration: line-through;
+            }
+          }
         }
       }
       .product-item:nth-child(odd){

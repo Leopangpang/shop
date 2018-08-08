@@ -34,8 +34,12 @@ html {
 	/* font-size: calc(100vw / 375 * 10);代表设备宽度为375时候，页面10px = 1rem */
     font-size: calc(100vw / 375 * 12);
     font-family: Calibri, sans-serif;
+    height: 67rem;
 }
 
+i{
+    font-style: normal;
+}
 .shop-bold-font{
     font:bold;
 }
