@@ -5,7 +5,10 @@ import App from './App'
 import router from './router'
 import './assets/icon/iconfont.css'
 import './styles/common.css'
+import { Badge, BadgeGroup } from 'vant'
 Vue.config.productionTip = false
+Vue.use(Badge)
+Vue.use(BadgeGroup)
 
 /* eslint-disable no-new */
 new Vue({

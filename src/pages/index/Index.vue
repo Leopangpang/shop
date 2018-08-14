@@ -1,5 +1,16 @@
 <template>
     <div class="index-area">
+      <header class="clearfloat">
+        <i class="shopIcon shop-saomiao"></i>
+        <div class="header-search float_l">
+          <input type="text" placeholder="Que buscas"/>
+          <i class="shopIcon shop-fangdajing-short search-icon"></i>
+        </div>
+        <i class="shopIcon shop-qianbao1">
+          <span class="badge-number">12</span>
+        </i>
+        <i class="shopIcon shop-xinxi-more-left"></i>
+      </header>
       <!-- 轮播区域 -->
       <div class="index-swiper">
         <van-swipe :autoplay="3000">
@@ -142,7 +153,7 @@ export default{
   },
   data () {
     return {
-      msg: 'asdfas'
+      activeKey: 0
     }
   }
 }
@@ -161,6 +172,12 @@ export default{
   }
   .index-color-lv{
     color: #ACCAAA;
+  }
+  //头部header
+  header{
+    .shop-qianbao1{
+      position: relative;
+    }
   }
   // 轮播区域
   .index-swiper{

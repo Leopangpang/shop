@@ -1,4 +1,4 @@
-html, body, div, span,h1, h2, h3, h4, h5, h6, p,a,img,b, u, i, center,dl, dt, dd, ol, ul, li,form, label,table, tbody, tfoot, thead, tr, th, td,footer, header,menu, nav,section {
+html, body, div, span, input, h1, h2, h3, h4, h5, h6, p,a,img,b, u, i, center,dl, dt, dd, ol, ul, li,form, label,table, tbody, tfoot, thead, tr, th, td,footer, header,menu, nav,section {
     margin: 0;
     padding: 0;
 }
@@ -36,7 +36,9 @@ html {
     font-family: Calibri, sans-serif;
     height: 67rem;
 }
-
+::-webkit-input-placeholder{
+    color: #b3b3b3;
+}
 i{
     font-style: normal;
 }
@@ -60,9 +62,68 @@ i{
 .clearfloat{
     zoom:1;  
 }
+.float_l{
+    float: left;
+}
+.float_r{
+    float: right;
+}
 .basic-blue-color{
     color:#255288;
 }
 .basic-orange-color{
     color:#feae54;
 }
+/* 徽章 */
+.badge-number{
+    right: -9px;
+    top: -6px;
+    color: #ffffff;
+    height: 11px;
+    line-height: 11px;
+    text-align: center;
+    font-size: 11px;
+    background-color: #ff414B;
+    display: inline-block;
+    padding: 2px;
+    border-radius: 45%;
+    position: absolute;
+}
+/* 公共头部开始 */
+header{
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 3%;
+    position: relative;
+}
+header .shopIcon{
+    font-size: 2rem;
+}
+header .shop-saomiao{
+    float: left;
+}
+header .shop-xinxi-more-left{
+    float: right;
+}
+.header-search{
+    width: 69%;
+    margin: 0 4%;
+    position: relative;
+}
+.header-search input{
+    height: 2rem;
+    width: 85%;
+    border-radius: 0.4rem;
+    color: #b3b3b3;
+    padding-left: 15%;
+    border: 1px solid #e5e5e5;
+    background-color: #f2f2f2;
+}
+.header-search .search-icon{
+    top: 1px;
+    left: 7%;
+    font-size: 1.2rem;
+    color: #b3b3b3;
+    position: absolute;
+}
+/* 公共头部结束 */
