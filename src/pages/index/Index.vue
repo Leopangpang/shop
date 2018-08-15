@@ -1,5 +1,6 @@
 <template>
     <div class="index-area">
+      <!-- 头部区域 -->
       <header class="clearfloat">
         <i class="shopIcon shop-saomiao"></i>
         <div class="header-search float_l">
@@ -141,6 +142,16 @@
           </div>
         </div>
       </div>
+      <!-- 底部区域 -->
+      <footer>
+        <span>PROMOS</span>
+        <ul class="clearfloat">
+          <li class="shopIcon shop-shouye1"></li>
+          <li class="shopIcon shop-sousuo"></li>
+          <li class="shopIcon shop-gouwuche"></li>
+          <li class="shopIcon shop-renyuan2"></li>
+        </ul>
+      </footer>
     </div>
 </template>
 
@@ -161,6 +172,7 @@ export default{
 
 <style scoped lang="less">
 .index-area{
+  padding-bottom: 4rem;
   .index-color-yellow{
     color: #D6B17B;
   }
