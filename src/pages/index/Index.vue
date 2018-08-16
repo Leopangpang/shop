@@ -238,7 +238,7 @@ export default{
           width:25%;
           text-align: center;
           i{
-            font-size: 4rem;
+            font-size: 3.6rem;
           }
           span{
             display: block;
@@ -291,7 +291,7 @@ export default{
           >i{
               right: 0;
               bottom: 0;
-              font-size:1.2rem;
+              font-size:1.6rem;
               position: absolute;
             }
           .product-name{

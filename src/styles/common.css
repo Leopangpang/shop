@@ -139,9 +139,21 @@ footer{
     background-color: #ffffff;
     border-top: 1px solid #e5e5e5;
 }
+footer >span{
+    font-size: 1.4rem;
+}
+footer ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 footer ul li{
     float: left;
-    margin: 0 5%;
-    font-size: 2rem;
+    margin: 0 7%;
+    font-size: 2rem!important;
+}
+footer ul li:nth-child(3){
+    padding-left: 18%;
 }
 /* 公共底部结束 */
