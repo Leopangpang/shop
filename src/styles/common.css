@@ -59,6 +59,10 @@ i{
     visibility: hidden;
     height: 0;
 }
+/* input边框为内边框 */
+input{
+    box-sizing: border-box;
+}
 .clearfloat{
     zoom:1;  
 }
@@ -94,7 +98,14 @@ header{
     height: 4rem;
     line-height: 4rem;
     padding: 0 3%;
+    text-align: center;
     position: relative;
+}
+header .header-title{
+  font-size: 2rem;
+}
+header .shop-qianbao1{
+  position: relative;
 }
 header .shopIcon{
     font-size: 2.4rem;
@@ -112,7 +123,7 @@ header .shop-xinxi-more-left{
 }
 .header-search input{
     height: 2.5rem;
-    width: 85%;
+    width: 100%;
     border-radius: 0.4rem;
     color: #b3b3b3;
     padding-left: 15%;
@@ -141,6 +152,7 @@ footer{
 }
 footer >span{
     font-size: 1.4rem;
+    font-weight: bold;
 }
 footer ul{
     position: absolute;

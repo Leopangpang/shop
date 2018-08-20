@@ -1,17 +1,7 @@
 <template>
     <div class="index-area">
       <!-- 头部区域 -->
-      <header class="clearfloat">
-        <i class="shopIcon shop-saomiao"></i>
-        <div class="header-search float_l">
-          <input type="text" placeholder="Que buscas"/>
-          <i class="shopIcon shop-fangdajing-short search-icon"></i>
-        </div>
-        <i class="shopIcon shop-qianbao1">
-          <span class="badge-number">12</span>
-        </i>
-        <i class="shopIcon shop-xinxi-more-left"></i>
-      </header>
+      <header-components :title-show=false :search-show=true :wallet-show=true ></header-components>
       <!-- 轮播区域 -->
       <div class="index-swiper">
         <van-swipe :autoplay="3000">
@@ -143,24 +133,20 @@
         </div>
       </div>
       <!-- 底部区域 -->
-      <footer>
-        <span>PROMOS</span>
-        <ul class="clearfloat">
-          <li class="shopIcon shop-shouye1"></li>
-          <li class="shopIcon shop-sousuo"></li>
-          <li class="shopIcon shop-gouwuche"></li>
-          <li class="shopIcon shop-renyuan2"></li>
-        </ul>
-      </footer>
+      <footer-components></footer-components>
     </div>
 </template>
 
 <script>
 import { Swipe, SwipeItem } from 'vant'
+import FooterComponents from '../../components/footer-components/footer-components'
+import HeaderComponents from '../../components/header-components/header-components'
 export default{
   components: {
     [Swipe.name]: Swipe,
-    [SwipeItem.name]: SwipeItem
+    [SwipeItem.name]: SwipeItem,
+    FooterComponents: FooterComponents,
+    HeaderComponents: HeaderComponents
   },
   data () {
     return {
@@ -184,12 +170,6 @@ export default{
   }
   .index-color-lv{
     color: #ACCAAA;
-  }
-  //头部header
-  header{
-    .shop-qianbao1{
-      position: relative;
-    }
   }
   // 轮播区域
   .index-swiper{
