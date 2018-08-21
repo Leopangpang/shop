@@ -7,6 +7,9 @@
       <input type="text" placeholder="Que buscas"/>
       <i class="shopIcon shop-fangdajing-short search-icon"></i>
     </div>
+    <div>
+      <cascad-menu-components :menus=menus></cascad-menu-components>
+    </div>
     <!-- 底部区域 -->
     <footer-components></footer-components>
  </div>
@@ -14,14 +17,253 @@
 <script>
 import FooterComponents from '../../components/footer-components/footer-components'
 import HeaderComponents from '../../components/header-components/header-components'
+import CascadMenuComponents from '../../components/scroll-components/cascad-menu'
 export default {
   components: {
     FooterComponents: FooterComponents,
-    HeaderComponents: HeaderComponents
+    HeaderComponents: HeaderComponents,
+    CascadMenuComponents: CascadMenuComponents
   },
   data () {
     return {
-      msg: 'df'
+      menus: [
+        {
+          name: '菜单1',
+          data: [
+            {
+              name: 'FJ-888',
+              imgSrc: '../../static/assets/images/intro1.jpg'
+            },
+            {
+              name: 'FJ-868',
+              imgSrc: '../../static/assets/images/intro1.jpg'
+            },
+            {
+              name: 'FJ-898',
+              imgSrc: '../../static/assets/images/intro1.jpg'
+            },
+            {
+              name: 'FJ-188',
+              imgSrc: '../../static/assets/images/intro1.jpg'
+            },
+            {
+              name: 'FJ-388',
+              imgSrc: '../../static/assets/images/intro1.jpg'
+            },
+            {
+              name: 'FJ-288',
+              imgSrc: '../../static/assets/images/intro1.jpg'
+            }
+          ]
+        },
+        {
+          name: '菜单8',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单2',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单3',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单4',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单5',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单6',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单7',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单8',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        },
+        {
+          name: '菜单9',
+          data: [
+            {
+              name: '1.1'
+            },
+            {
+              name: '1.2'
+            },
+            {
+              name: '1.3'
+            },
+            {
+              name: '1.4'
+            },
+            {
+              name: '1.5'
+            },
+            {
+              name: '1.6'
+            }
+          ]
+        }
+      ]
     }
   }
 }

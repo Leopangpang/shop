@@ -34,7 +34,6 @@ html {
 	/* font-size: calc(100vw / 375 * 10);代表设备宽度为375时候，页面10px = 1rem */
     font-size: calc(100vw / 375 * 12);
     font-family: Calibri, sans-serif;
-    height: 67rem;
 }
 ::-webkit-input-placeholder{
     color: #b3b3b3;
@@ -95,20 +94,20 @@ input{
 }
 /* 公共头部开始 */
 header{
-    height: 4rem;
-    line-height: 4rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
     padding: 0 3%;
     text-align: center;
     position: relative;
 }
 header .header-title{
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 header .shop-qianbao1{
   position: relative;
 }
 header .shopIcon{
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 header .shop-saomiao{
     float: left;
