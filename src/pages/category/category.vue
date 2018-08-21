@@ -32,27 +32,27 @@ export default {
           data: [
             {
               name: 'FJ-888',
-              imgSrc: '../../static/assets/images/intro1.jpg'
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
               name: 'FJ-868',
-              imgSrc: '../../static/assets/images/intro1.jpg'
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
               name: 'FJ-898',
-              imgSrc: '../../static/assets/images/intro1.jpg'
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
               name: 'FJ-188',
-              imgSrc: '../../static/assets/images/intro1.jpg'
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
               name: 'FJ-388',
-              imgSrc: '../../static/assets/images/intro1.jpg'
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
               name: 'FJ-288',
-              imgSrc: '../../static/assets/images/intro1.jpg'
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },

@@ -177,14 +177,21 @@ export default {
           }
         }
         .product-section{
-          // overflow: hidden;
+          overflow: hidden;
+          width: 100%;
           li{
-            // float: left;
-            // width: 33%;
+            float: left;
+            width: 33%;
             .product-area{
+              width: 100%;
+              .product-img{
+                img{
+                  width:100%;
+                }
+              }
               .product-name{
-                line-height: 40px;
-                height: 40px;
+                line-height: 2rem;
+                height: 3rem;
               }
             }
           }
