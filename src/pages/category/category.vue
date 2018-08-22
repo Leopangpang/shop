@@ -1,7 +1,7 @@
 <template>
  <div class="category-area">
     <!-- 头部区域 -->
-    <header-components :title-show=true :title-content="'Category'" :search-show=false :wallet-show=false ></header-components>
+    <header-components :header-obj="headerObj"></header-components>
     <!-- 搜索区域 -->
     <div class="header-search">
       <input type="text" placeholder="Que buscas"/>
@@ -26,31 +26,45 @@ export default {
   },
   data () {
     return {
+      headerObj: {
+        scaleShow: true,
+        backShow: false,
+        searchShow: false,
+        walletShow: false,
+        titleShow: true,
+        titleContent: 'Category'
+      },
       menus: [
         {
           name: '菜单1',
           data: [
             {
+              id: 1,
               name: 'FJ-888asdfasdfasdfasdfasdfadf',
               imgSrc: '../../static/assets/images/product3.png'
             },
             {
+              id: 2,
               name: 'FJ-868',
               imgSrc: '../../static/assets/images/product3.png'
             },
             {
+              id: 3,
               name: 'FJ-898',
               imgSrc: '../../static/assets/images/product3.png'
             },
             {
+              id: 4,
               name: 'FJ-188',
               imgSrc: '../../static/assets/images/product3.png'
             },
             {
+              id: 5,
               name: 'FJ-388',
               imgSrc: '../../static/assets/images/product3.png'
             },
             {
+              id: 6,
               name: 'FJ-288',
               imgSrc: '../../static/assets/images/product3.png'
             }

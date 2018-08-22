@@ -32,7 +32,7 @@
               <span>{{menu.name}}</span>
             </div>
             <ul class="product-section">
-              <li v-for="(item, j) in menu.data" :key="j">
+              <li v-for="(item, j) in menu.data" :key="j" @click="toDetail(item.id)">
                 <div class="product-area">
                   <div class="product-img">
                     <img :src="item.imgSrc" />
@@ -109,6 +109,9 @@ export default {
         this.rightTops.push(height)
       })
       console.log(this.rightTops)
+    },
+    toDetail (id) {
+      this.$router.push({path: `/detail/${id}`})
     }
   },
   components: {

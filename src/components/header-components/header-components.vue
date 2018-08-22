@@ -1,25 +1,35 @@
 <template>
   <!-- 头部区域 -->
   <header class="clearfloat">
-    <i class="shopIcon shop-saomiao"></i>
-    <span v-if="titleShow" class="header-title">{{titleContent}}</span>
-    <div v-if="searchShow" class="header-search float_l">
+    <!-- 扫描 -->
+    <i v-if="headerObj.scaleShow" class="shopIcon shop-saomiao float_l"></i>
+    <!-- 回退 -->
+    <i v-if="headerObj.backShow" class="shopIcon shop-jiantou-copy float_l" @click="back()"></i>
+    <!-- 标题 -->
+    <span v-if="headerObj.titleShow" class="header-title">{{headerObj.titleContent}}</span>
+    <!-- 搜索 -->
+    <div v-if="headerObj.searchShow" class="header-search float_l">
       <input type="text" placeholder="Que buscas"/>
       <i class="shopIcon shop-fangdajing-short search-icon"></i>
     </div>
-    <i v-if="walletShow" class="shopIcon shop-qianbao1">
+    <!-- 钱包 -->
+    <i v-if="headerObj.walletShow" class="shopIcon shop-qianbao1">
       <span class="badge-number">12</span>
     </i>
-    <i class="shopIcon shop-xinxi-more-left"></i>
+    <!-- 咨询 -->
+    <i class="shopIcon shop-xinxi-more-left float_r"></i>
   </header>
 </template>
 <script>
 export default {
   // titleShow:标题显示，searchShow搜索显示，walletShow钱包显示
-  props: ['titleContent', 'titleShow', 'searchShow', 'walletShow'],
+  props: ['headerObj'],
   data () {
-    return {
-      dd: true
+    return {}
+  },
+  methods: {
+    back () {
+      this.$router.go(-1)
     }
   }
 }

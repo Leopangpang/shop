@@ -1,0 +1,158 @@
+<template>
+  <div class="detail-area">
+    <!-- 头部 -->
+    <header-components :headerObj="headerObj"></header-components>
+    <!-- 产品轮播 -->
+    <div class="swiper-section">
+      <van-swipe :autoplay="3000">
+        <van-swipe-item v-for="(item, i) in product.imgArray" :key = i>
+          <img :src="item.imgSrc"/>
+        </van-swipe-item>
+      </van-swipe>
+      <!-- 打折提示 -->
+      <div class="saving-tip">
+        <span>Saving {{product.savingTip}}% now</span>
+      </div>
+      <!-- 分享及收藏提示 -->
+      <div class="circle-tip">
+        <span class="share-circle">
+          <i class="shopIcon shop-fenxiang"></i>
+        </span>
+        <span class="love-circle">
+          <i class="shopIcon shop-aixin"></i>
+        </span>
+      </div>
+    </div>
+    <div class="detail-area-bottom">
+      <!-- 产品名称、价格区域 -->
+      <div class="dab-section product-section">
+        <p>{{product.name}}</p>
+        <span class="new-price">&yen;{{product.newPrice}}</span>
+        <span class="old-price">&yen;{{product.oldPrice}}</span>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import { Swipe, SwipeItem } from 'vant'
+import HeaderComponents from '../../components/header-components/header-components'
+export default {
+  components: {
+    [Swipe.name]: Swipe,
+    [SwipeItem.name]: SwipeItem,
+    HeaderComponents: HeaderComponents
+  },
+  data () {
+    return {
+      // 虚构product的数据，有这里得从后台请求获得
+      product: {
+        name: '欧洲经典式手表',
+        newPrice: 234,
+        oldPrice: 666,
+        savingTip: 29,
+        imgArray: [
+          {
+            imgSrc: '../../static/assets/images/intro1.jpg'
+          },
+          {
+            imgSrc: '../../static/assets/images/intro1.jpg'
+          },
+          {
+            imgSrc: '../../static/assets/images/intro1.jpg'
+          },
+          {
+            imgSrc: '../../static/assets/images/intro1.jpg'
+          }
+        ]
+      },
+      headerObj: {
+        scaleShow: false,
+        backShow: true,
+        searchShow: false,
+        walletShow: false,
+        titleShow: true,
+        titleContent: 'Detail'
+      }
+    }
+  },
+  created () {
+    // let productId = this.$route.params
+    // 这里以后通过productId查询商品的信息 ？？？？？？？？？？？？？？？？？？？？？？？？？？？？别忘记了
+  }
+}
+</script>
+<style lang="less">
+  .detail-area{
+    .swiper-section{
+      min-height: 26rem;
+      position: relative;
+      border-bottom: 1px solid #d5d5d5;
+      .van-swipe__indicators{
+        bottom: 1.8rem;
+      }
+      .saving-tip{
+        bottom: 0;
+        left: 0;
+        width: 4rem;
+        height: 2rem;
+        position: absolute;
+        padding: 2%;
+        background-color: #EF6950;
+        border-top-right-radius :1.7rem;
+        span{
+          color: #ffffff;
+          width: 100%;
+          height: 100%;
+          font-size: 1.1rem;
+          display: inline-block
+        }
+      }
+      .circle-tip{
+        bottom:-1.3rem;
+        right: 0;
+        position: absolute;
+        span{
+          width: 2.6rem;
+          height: 2.6rem;
+          line-height: 2.6rem;
+          text-align: center;
+          border: 1px solid #e5e5e5;
+          border-radius: 50%;
+          display: inline-block;
+          background-color: #ffffff;
+          margin-right: 1rem;
+          i{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .detail-area-bottom{
+      background-color: #F2F2F2;
+      .dab-section{
+        padding: 3%;
+        background-color: #FFFFFF;
+      }
+      .product-section{
+        >p{
+          margin-top: 1rem;
+          font-size: 1.4rem;
+        }
+        .new-price{
+          font-size: 2.6rem;
+          height: 3rem;
+          line-height: 3rem;
+          color: #AC1000;
+        }
+        .old-price{
+          height: 2rem;
+          line-height: 2rem;
+          margin-left: 1rem;
+          vertical-align: text-bottom;
+          text-decoration: line-through;
+          color: #999999;
+        }
+      }
+    }
+  }
+</style>

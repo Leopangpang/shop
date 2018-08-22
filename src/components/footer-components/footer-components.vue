@@ -20,7 +20,7 @@ export default {
       routePath: ''
     }
   },
-  mounted () {
+  created () {
     // 获取path参数，然后截去第一个字符串，例如‘/index’ 变成'index'
     this.routePath = this.$route.path.substr(1)
     this.isSelected()

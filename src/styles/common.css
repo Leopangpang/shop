@@ -115,12 +115,6 @@ header .shop-qianbao1{
 header .shopIcon{
     font-size: 2rem;
 }
-header .shop-saomiao{
-    float: left;
-}
-header .shop-xinxi-more-left{
-    float: right;
-}
 .header-search{
     width: 65%;
     margin: 0 4%;
@@ -174,3 +168,11 @@ footer ul li:nth-child(3){
     padding-left: 18%;
 }
 /* 公共底部结束 */
+/* 轮播区域 */
+.swiper-section{
+    width:100%;
+    font-size: 0;
+}
+.swiper-section img{
+    width:100%;
+}

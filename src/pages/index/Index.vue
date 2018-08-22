@@ -1,9 +1,9 @@
 <template>
     <div class="index-area">
       <!-- 头部区域 -->
-      <header-components :title-show=false :search-show=true :wallet-show=true ></header-components>
+      <header-components :header-obj="headerObj"></header-components>
       <!-- 轮播区域 -->
-      <div class="index-swiper">
+      <div class="swiper-section">
         <van-swipe :autoplay="3000">
           <van-swipe-item>
             <img src="../../assets/images/lunbo1.jpg"/>
@@ -76,8 +76,8 @@
               <p class="product-name">{{item.name}}</p>
               <span class="product-account">account</span>
               <p class="product-price">
-                <span class="new-price"><i>$</i>{{item.newPrice}}</span>
-                <span class="old-price"><i>$</i>{{item.oldPrice}}</span>
+                <span class="new-price"><i>&yen;</i>{{item.newPrice}}</span>
+                <span class="old-price"><i>&yen;</i>{{item.oldPrice}}</span>
               </p>
               <i class="shopIcon shop-gouwuche"></i>
             </div>
@@ -102,6 +102,13 @@ export default{
   },
   data () {
     return {
+      headerObj: {
+        scaleShow: true,
+        searchShow: true,
+        walletShow: true,
+        backShow: false,
+        titleContent: ''
+      },
       productList: [
         {
           imgSrc: '../../../static/assets/images/product3.png',
@@ -183,14 +190,6 @@ export default{
   }
   .index-color-lv{
     color: #ACCAAA;
-  }
-  // 轮播区域
-  .index-swiper{
-    width:100%;
-    font-size: 0;
-    img{
-      width:100%;
-    }
   }
   .index-section{
     padding: 0 3%;
