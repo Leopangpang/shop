@@ -31,7 +31,7 @@ export default {
           name: '菜单1',
           data: [
             {
-              name: 'FJ-888',
+              name: 'FJ-888asdfasdfasdfasdfasdfadf',
               imgSrc: '../../static/assets/images/product3.png'
             },
             {
@@ -60,22 +60,28 @@ export default {
           name: '菜单8',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -83,22 +89,28 @@ export default {
           name: '菜单2',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -106,22 +118,28 @@ export default {
           name: '菜单3',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -129,22 +147,28 @@ export default {
           name: '菜单4',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -152,22 +176,28 @@ export default {
           name: '菜单5',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -175,22 +205,28 @@ export default {
           name: '菜单6',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -198,22 +234,28 @@ export default {
           name: '菜单7',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -221,22 +263,28 @@ export default {
           name: '菜单8',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         },
@@ -244,22 +292,28 @@ export default {
           name: '菜单9',
           data: [
             {
-              name: '1.1'
+              name: '1.1',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.2'
+              name: '1.2',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.3'
+              name: '1.3',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.4'
+              name: '1.4',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.5'
+              name: '1.5',
+              imgSrc: '../../static/assets/images/product3.png'
             },
             {
-              name: '1.6'
+              name: '1.6',
+              imgSrc: '../../static/assets/images/product3.png'
             }
           ]
         }

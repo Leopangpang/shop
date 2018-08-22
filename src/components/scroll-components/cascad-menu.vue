@@ -37,7 +37,7 @@
                   <div class="product-img">
                     <img :src="item.imgSrc" />
                   </div>
-                  <div class="product-name">{{item.name}}</div>
+                  <div class="product-name word-nowrap">{{item.name}}</div>
                 </div>
               </li>
             </ul>
@@ -124,9 +124,10 @@ export default {
     top: 7.8rem;
     bottom: 5rem;
     width: 100%;
-    border: 1px solid red;
     overflow: hidden;
     box-sizing: border-box;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
     .left-menu{
       flex: 0 0 20%;
       width: 20%;
@@ -136,7 +137,7 @@ export default {
         height: 4rem;
         width: 100%;
         &.current{
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           font-weight: bold;
           color: #434343;
           background: #fff;
@@ -152,12 +153,13 @@ export default {
       text-align: center;
       .right-item{
         height: 100%;
-        border: 1px solid #ccc;
+        padding: 0 2%;
         .title{
-          border-bottom: 1px solid #ccc;
           height: 3rem;
           line-height: 3rem;
+          color:  #646365;
           position: relative;
+          font-size:1.2rem;
           span{
             display: block;
           }
@@ -182,6 +184,8 @@ export default {
           li{
             float: left;
             width: 33%;
+            height: 10rem;
+            margin-bottom: 1rem;
             .product-area{
               width: 100%;
               .product-img{
@@ -190,8 +194,9 @@ export default {
                 }
               }
               .product-name{
-                line-height: 2rem;
-                height: 3rem;
+                margin-top: 0.5rem;
+                color: #A2A2A2;
+                padding: 0 8%;
               }
             }
           }

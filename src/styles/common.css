@@ -62,6 +62,12 @@ i{
 input{
     box-sizing: border-box;
 }
+/* 字符过长省略号显示 */
+.word-nowrap{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .clearfloat{
     zoom:1;  
 }

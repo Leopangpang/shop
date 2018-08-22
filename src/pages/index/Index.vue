@@ -70,62 +70,14 @@
           Recommend
         </span>
         <div class="content clearfloat">
-          <div class="product-item">
-            <img src="../../assets/images/intro1.jpg"/>
+          <div class="product-item" v-for="(item,i) in productList" :key = i>
+            <img :src="item.imgSrc"/>
             <div class="product-detail">
-              <p class="product-name">男式手表</p>
+              <p class="product-name">{{item.name}}</p>
               <span class="product-account">account</span>
               <p class="product-price">
-                <span class="new-price"><i>$</i>34.00</span>
-                <span class="old-price"><i>$</i>99.00</span>
-              </p>
-              <i class="shopIcon shop-gouwuche"></i>
-            </div>
-          </div>
-          <div class="product-item">
-            <img src="../../assets/images/intro1.jpg"/>
-            <div class="product-detail">
-              <p class="product-name">男式手表</p>
-              <span class="product-account">account</span>
-              <p class="product-price">
-                <span class="new-price"><i>$</i>34.00</span>
-                <span class="old-price"><i>$</i>99.00</span>
-              </p>
-              <i class="shopIcon shop-gouwuche"></i>
-            </div>
-          </div>
-          <div class="product-item">
-            <img src="../../assets/images/intro1.jpg"/>
-            <div class="product-detail">
-              <p class="product-name">男式手表</p>
-              <span class="product-account">account</span>
-              <p class="product-price">
-                <span class="new-price"><i>$</i>34.00</span>
-                <span class="old-price"><i>$</i>99.00</span>
-              </p>
-              <i class="shopIcon shop-gouwuche"></i>
-            </div>
-          </div>
-          <div class="product-item">
-            <img src="../../assets/images/intro1.jpg"/>
-            <div class="product-detail">
-              <p class="product-name">男式手表</p>
-              <span class="product-account">account</span>
-              <p class="product-price">
-                <span class="new-price"><i>$</i>34.00</span>
-                <span class="old-price"><i>$</i>99.00</span>
-              </p>
-              <i class="shopIcon shop-gouwuche"></i>
-            </div>
-          </div>
-          <div class="product-item">
-            <img src="../../assets/images/intro1.jpg"/>
-            <div class="product-detail">
-              <p class="product-name">男式手表</p>
-              <span class="product-account">account</span>
-              <p class="product-price">
-                <span class="new-price"><i>$</i>34.00</span>
-                <span class="old-price"><i>$</i>99.00</span>
+                <span class="new-price"><i>$</i>{{item.newPrice}}</span>
+                <span class="old-price"><i>$</i>{{item.oldPrice}}</span>
               </p>
               <i class="shopIcon shop-gouwuche"></i>
             </div>
@@ -150,7 +102,68 @@ export default{
   },
   data () {
     return {
-      activeKey: 0
+      productList: [
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '男式手表',
+          newPrice: 55,
+          oldPrice: 99
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '女式手表',
+          newPrice: 122,
+          oldPrice: 993
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '男式手表',
+          newPrice: 55,
+          oldPrice: 99
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '女式手表',
+          newPrice: 122,
+          oldPrice: 993
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '男式手表',
+          newPrice: 55,
+          oldPrice: 99
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '女式手表',
+          newPrice: 122,
+          oldPrice: 993
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '男式手表',
+          newPrice: 55,
+          oldPrice: 99
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '女式手表',
+          newPrice: 122,
+          oldPrice: 993
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '男式手表',
+          newPrice: 55,
+          oldPrice: 99
+        },
+        {
+          imgSrc: '../../../static/assets/images/product3.png',
+          name: '女式手表',
+          newPrice: 122,
+          oldPrice: 993
+        }
+      ]
     }
   }
 }
