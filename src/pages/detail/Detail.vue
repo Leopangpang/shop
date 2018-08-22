@@ -30,6 +30,17 @@
         <span class="new-price">&yen;{{product.newPrice}}</span>
         <span class="old-price">&yen;{{product.oldPrice}}</span>
       </div>
+      <div class="dab-section activity-section">
+        <p>This products has promotion activities,because of Xmas!</p>
+        <div class="icon-section">
+          <span><i class="shopIcon shop-icon-"></i></span>
+          <i>|</i>
+          <span><i class="shopIcon shop-liwu"></i></span>
+          <i>|</i>
+          <span><i class="shopIcon shop-jiantou-wanqu"></i></span>
+        </div>
+        <i class="shopIcon shop-jiantouyou"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -93,8 +104,8 @@ export default {
       .saving-tip{
         bottom: 0;
         left: 0;
-        width: 4rem;
-        height: 2rem;
+        width: 4.5rem;
+        height: 2.4rem;
         position: absolute;
         padding: 2%;
         background-color: #EF6950;
@@ -110,6 +121,7 @@ export default {
       .circle-tip{
         bottom:-1.3rem;
         right: 0;
+        z-index: 1;
         position: absolute;
         span{
           width: 2.6rem;
@@ -131,18 +143,25 @@ export default {
       background-color: #F2F2F2;
       .dab-section{
         padding: 3%;
+        position: relative;
+        margin-bottom: 0.6rem;
         background-color: #FFFFFF;
+        >.shopIcon{
+          top: 48%;
+          right: 1rem;
+          position: absolute;
+        }
       }
       .product-section{
         >p{
-          margin-top: 1rem;
+          margin-top: 0.5rem;
           font-size: 1.4rem;
         }
         .new-price{
-          font-size: 2.6rem;
+          font-size: 2.2rem;
           height: 3rem;
           line-height: 3rem;
-          color: #AC1000;
+          color: #be382e;
         }
         .old-price{
           height: 2rem;
@@ -151,6 +170,32 @@ export default {
           vertical-align: text-bottom;
           text-decoration: line-through;
           color: #999999;
+        }
+      }
+      .activity-section{
+        p{
+          padding-right: 2.4rem;
+        }
+        .icon-section{
+          margin-top: 1rem;
+          >i{
+            margin: 0 1rem;
+            color: #e5e5e5;
+          }
+          span{
+            width: 2.2rem;
+            height: 2.2rem;
+            line-height: 2.2rem;
+            text-align: center;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: #d74c43;
+            i{
+              font-size: 1.8rem;
+              font-weight: bold;
+              color: #ffffff;
+            }
+          }
         }
       }
     }
