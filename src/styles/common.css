@@ -88,14 +88,14 @@ input{
     right: -16%;
     top: -11%;
     color: #ffffff;
-    height: 0.9rem;
-    line-height: 0.9rem;
+    height: 1rem;
+    line-height: 1.1rem;
     text-align: center;
     font-size: 0.9rem;
     background-color: #ff414B;
     display: inline-block;
     padding: 1px;
-    border-radius: 42%;
+    border-radius: 50%;
     position: absolute;
 }
 /* 公共头部开始 */
@@ -113,11 +113,11 @@ header .shop-qianbao1{
   position: relative;
 }
 header .shopIcon{
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 .header-search{
     width: 65%;
-    margin: 0 4%;
+    margin-left: 4%;
     position: relative;
 }
 .header-search input{

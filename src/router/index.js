@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/pages/index/Index'
 import Category from '@/pages/category/Category'
 import Detail from '@/pages/detail/Detail'
+import Member from '@/pages/member/Member'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/detail/:id',
       name: 'Detail',
       component: Detail
+    },
+    {
+      path: '/member',
+      name: 'Member',
+      component: Member
     }
   ]
 })

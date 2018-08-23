@@ -30,10 +30,11 @@
         <span class="new-price">&yen;{{product.newPrice}}</span>
         <span class="old-price">&yen;{{product.oldPrice}}</span>
       </div>
+      <!-- 活动区域 -->
       <div class="dab-section activity-section">
         <p>This products has promotion activities,because of Xmas!</p>
         <div class="icon-section">
-          <span><i class="shopIcon shop-icon-"></i></span>
+          <span><i class="shopIcon shop-icon-flash"></i></span>
           <i>|</i>
           <span><i class="shopIcon shop-liwu"></i></span>
           <i>|</i>
@@ -41,6 +42,29 @@
         </div>
         <i class="shopIcon shop-jiantouyou"></i>
       </div>
+      <!-- 逻辑区域 -->
+      <div class="dab-section logistics-section">
+        <p>Logistics</p>
+        <ul>
+          <li><i>.</i>Freight charge: <span>&yen;1500</span></li>
+          <li><i>.</i>Free Shipping,if order more than<span>&yen;2000</span></li>
+          <li><i>.</i>Estemated arriving: <span>&yen;200</span></li>
+        </ul>
+        <i class="shopIcon shop-jiantouyou"></i>
+      </div>
+      <!-- 选择区域 -->
+      <div class="dab-section select-section">
+        <p>
+          <span>Specification & quantity</span>
+          <i>please select</i>
+        </p>
+        <i class="shopIcon shop-jiantouyou"></i>
+      </div>
+    </div>
+    <!-- 加入购车或者购买 -->
+    <div class="footer-section clearfloat">
+      <span class="cart-button float_l">+ Cart</span>
+      <span class="buy-button float_r">Buy</span>
     </div>
   </div>
 </template>
@@ -94,6 +118,7 @@ export default {
 </script>
 <style lang="less">
   .detail-area{
+    padding-bottom: 4rem;
     .swiper-section{
       min-height: 26rem;
       position: relative;
@@ -105,7 +130,7 @@ export default {
         bottom: 0;
         left: 0;
         width: 4.5rem;
-        height: 2.4rem;
+        height: 2.1rem;
         position: absolute;
         padding: 2%;
         background-color: #EF6950;
@@ -140,6 +165,7 @@ export default {
       }
     }
     .detail-area-bottom{
+      padding-bottom: 0.6rem;
       background-color: #F2F2F2;
       .dab-section{
         padding: 3%;
@@ -147,8 +173,9 @@ export default {
         margin-bottom: 0.6rem;
         background-color: #FFFFFF;
         >.shopIcon{
-          top: 48%;
+          top: 44%;
           right: 1rem;
+          font-size: 1.8rem;
           position: absolute;
         }
       }
@@ -180,6 +207,7 @@ export default {
           margin-top: 1rem;
           >i{
             margin: 0 1rem;
+            font-size: 1.8rem;
             color: #e5e5e5;
           }
           span{
@@ -192,11 +220,65 @@ export default {
             background-color: #d74c43;
             i{
               font-size: 1.8rem;
-              font-weight: bold;
               color: #ffffff;
             }
           }
         }
+      }
+      .logistics-section{
+         line-height: 1rem;
+        p{
+          font-size: 1.6rem;
+        }
+        ul{
+          li{
+            color: #8C8C8C;
+            i{
+              font-size: 4rem;
+              margin-right: 0.5rem;
+            }
+            span{
+              color: #feae54;
+            }
+          }
+        }
+      }
+      .select-section{
+        padding: 0 3%;
+        margin-bottom: 0;
+        p{
+          line-height: 4rem;
+          font-size: 1.6rem;
+          padding-right: 2.2rem;
+          i{
+            float: right;
+            font-size: 1.1rem;
+            color: #999999;
+          }
+        }
+        .shopIcon{
+          top: 34%;
+        }
+      }
+    }
+    .footer-section{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      span{
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        font-size: 2rem;
+        color: #ffffff;
+        width: 50%;
+      }
+      .cart-button{
+        background-color: #255288;
+      }
+      .buy-button{
+        background-color: #feae54;
       }
     }
   }

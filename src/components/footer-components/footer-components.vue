@@ -51,7 +51,7 @@ export default {
       } else if (num === 3) {
         this.$router.push({path: '/car'})
       } else {
-        this.$router.push({path: '/menber'})
+        this.$router.push({path: '/member'})
       }
     }
   }
