@@ -140,14 +140,14 @@ header .shopIcon{
 /* 公共底部开始 */
 footer{
     height: 4rem;
-    width: 92%;
+    width: 100%;
     line-height: 4rem;
     position: fixed;
     bottom: 0;
-    padding: 0 4%;
     text-align: center;
     background-color: #ffffff;
     border-top: 1px solid #e5e5e5;
+    z-index: 999;
 }
 footer >span{
     font-size: 1.4rem;
@@ -161,11 +161,12 @@ footer ul{
 }
 footer ul li{
     float: left;
-    margin: 0 7%;
+    margin: 0 6.8%;
     font-size: 2rem!important;
 }
 footer ul li:nth-child(3){
-    padding-left: 18%;
+    padding-left: 19%;
+    margin-right: 6%;
 }
 /* 公共底部结束 */
 /* 轮播区域 */

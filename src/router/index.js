@@ -4,6 +4,7 @@ import Index from '@/pages/index/Index'
 import Category from '@/pages/category/Category'
 import Detail from '@/pages/detail/Detail'
 import Member from '@/pages/member/Member'
+import Car from '@/pages/car/Car'
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
       path: '/member',
       name: 'Member',
       component: Member
+    },
+    {
+      path: '/car',
+      name: 'Car',
+      component: Car
     }
   ]
 })
