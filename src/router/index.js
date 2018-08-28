@@ -5,10 +5,15 @@ import Category from '@/pages/category/Category'
 import Detail from '@/pages/detail/Detail'
 import Member from '@/pages/member/Member'
 import Car from '@/pages/car/Car'
+import PlaceOrder from '@/pages/place-order/PlaceOrder'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      redirect: '/index'
+    },
     {
       path: '/index',
       name: 'Index',
@@ -33,6 +38,11 @@ export default new Router({
       path: '/car',
       name: 'Car',
       component: Car
+    },
+    {
+      path: '/placeOrder',
+      name: 'PlaceOrder',
+      component: PlaceOrder
     }
   ]
 })
