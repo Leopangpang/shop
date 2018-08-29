@@ -17,7 +17,7 @@
       <span class="badge-number">12</span>
     </i>
     <!-- 咨询 -->
-    <i class="shopIcon shop-xinxi-more-left float_r"></i>
+    <i v-if="headerObj.askShow" class="shopIcon shop-xinxi-more-left float_r"></i>
   </header>
 </template>
 <script>

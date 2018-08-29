@@ -28,10 +28,8 @@ export default {
     return {
       headerObj: {
         scaleShow: true,
-        backShow: false,
-        searchShow: false,
-        walletShow: false,
         titleShow: true,
+        askShow: true,
         titleContent: 'Category'
       },
       menus: [

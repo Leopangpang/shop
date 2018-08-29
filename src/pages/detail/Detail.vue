@@ -101,11 +101,9 @@ export default {
         ]
       },
       headerObj: {
-        scaleShow: false,
         backShow: true,
-        searchShow: false,
-        walletShow: false,
         titleShow: true,
+        askShow: true,
         titleContent: 'Detail'
       }
     }

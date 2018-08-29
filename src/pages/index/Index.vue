@@ -106,7 +106,7 @@ export default{
         scaleShow: true,
         searchShow: true,
         walletShow: true,
-        backShow: false,
+        askShow: true,
         titleContent: ''
       },
       productList: [

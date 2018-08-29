@@ -59,11 +59,8 @@ export default {
   data () {
     return {
       headerObj: {
-        scaleShow: false,
-        backShow: false,
-        searchShow: false,
-        walletShow: false,
         titleShow: true,
+        askShow: true,
         titleContent: 'Car'
       },
       productList: [
