@@ -7,6 +7,7 @@ import Member from '@/pages/member/Member'
 import Car from '@/pages/car/Car'
 import PlaceOrder from '@/pages/place-order/PlaceOrder'
 import AddressList from '@/pages/address-list/AddressList'
+import Address from '@/pages/address/Address'
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +50,11 @@ export default new Router({
       path: '/addressList',
       name: 'AddressList',
       component: AddressList
+    },
+    {
+      path: '/address',
+      name: 'Address',
+      component: Address
     }
   ]
 })

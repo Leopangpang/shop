@@ -2,22 +2,22 @@
   <!-- 头部区域 -->
   <header class="clearfloat">
     <!-- 扫描 -->
-    <i v-if="headerObj.scaleShow" class="shopIcon shop-saomiao float_l"></i>
+    <i v-if="headerObj.scaleShow" class="shopIcon shop-saomiao absolute-center"></i>
     <!-- 回退 -->
-    <i v-if="headerObj.backShow" class="shopIcon shop-jiantou-copy float_l" @click="back()"></i>
+    <i v-if="headerObj.backShow" class="shopIcon shop-jiantou-copy absolute-center" @click="back()"></i>
     <!-- 标题 -->
-    <span v-if="headerObj.titleShow" class="header-title">{{headerObj.titleContent}}</span>
+    <span v-if="headerObj.titleShow" class="header-title absolute-Ycenter absolute-center">{{headerObj.titleContent}}</span>
     <!-- 搜索 -->
-    <div v-if="headerObj.searchShow" class="header-search float_l">
+    <div v-if="headerObj.searchShow" class="absolute-center header-search">
       <input type="text" placeholder="Que buscas"/>
       <i class="shopIcon shop-fangdajing-short search-icon"></i>
     </div>
     <!-- 钱包 -->
-    <i v-if="headerObj.walletShow" class="shopIcon shop-qianbao1">
+    <i v-if="headerObj.walletShow" class="shopIcon absolute-center shop-qianbao1">
       <span class="badge-number">12</span>
     </i>
     <!-- 咨询 -->
-    <i v-if="headerObj.askShow" class="shopIcon shop-xinxi-more-left float_r"></i>
+    <i v-if="headerObj.askShow" class="shopIcon absolute-center shop-xinxi-more-left"></i>
   </header>
 </template>
 <script>

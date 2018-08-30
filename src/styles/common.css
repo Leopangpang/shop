@@ -44,6 +44,13 @@ i{
 .shop-bold-font{
     font:bold;
 }
+/* 垂直居中X轴 */
+.absolute-center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
 /* 阴影部分兼容 向右 向下的阴影*/
 .border-shadow{
     box-shadow: 0.1rem 0.1rem 0.2rem #999999;
@@ -101,23 +108,31 @@ input{
 /* 公共头部开始 */
 header{
     height: 3.6rem;
-    line-height: 3.6rem;
     padding: 0 3%;
     text-align: center;
     position: relative;
 }
 header .header-title{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+}
+header .shop-saomiao{
+  left: 7%;
 }
 header .shop-qianbao1{
-  position: relative;
+  left: 82%;
 }
 header .shopIcon{
     font-size: 2.2rem;
 }
+header .shop-jiantou-copy{
+    left: 5%;
+}
+header .shop-xinxi-more-left{
+    left: 93%;
+}
 .header-search{
     width: 65%;
-    margin-left: 4%;
+    left: 44.5%;
     position: relative;
 }
 .header-search input{
@@ -130,7 +145,7 @@ header .shopIcon{
     background-color: #f2f2f2;
 }
 .header-search .search-icon{
-    top: 1px;
+    top: 27%;
     left: 6%;
     font-size: 1.2rem;
     color: #b3b3b3;

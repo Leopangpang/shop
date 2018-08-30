@@ -5,20 +5,20 @@
     <div class="content">
       <div class="address-section">
         <div class="background"></div>
-        <p>收货地址</p>
+        <p><span class="absolute-center">收货地址</span></p>
         <div class="address-detail">
           <div class="selected-address">
-            <p><strong><span>胡景涛</span><i class="phone">150*****6015</i></strong></p>
+            <p><strong><span>{{deliveryAddress.name}}</span><i class="phone">{{deliveryAddress.tel}}</i></strong></p>
             <p class="more-address">
-              <span>深圳市宝安区宝源阿斯蒂芬阿斯蒂芬阿共和世家5栋305</span>
+              <span>{{deliveryAddress.address}}</span>
               <router-link to="/addressList"><i class="shopIcon shop-jiantouyou float_r"></i></router-link>
             </p>
           </div>
-          <span>新建地址</span>
+          <router-link to="/address"><span class="add-address">新建地址</span></router-link>
         </div>
       </div>
       <div class="order-section">
-        <p><i class="shopIcon shop-maichang"></i>LAMECOME</p>
+        <p><i class="shopIcon shop-maichang"></i><span class="absolute-center">京东自营</span></p>
         <ul>
           <li class="clearfloat" v-for="(item, index) in productList" :key="index">
             <img :src="item.imgSrc" />
@@ -30,6 +30,16 @@
             </p>
           </li>
         </ul>
+      </div>
+      <div class="cost-section">
+        <p class="product-fee">
+          <span class="float_l">商品金额</span>
+          <i class="float_r">&yen; {{productFee}}</i>
+        </p>
+        <p class="express-fee">
+          <span class="float_l">邮费<i>(总重: 1.05kg)</i></span>
+          <i class="float_r"> + &yen; {{expressFee}}</i>
+        </p>
       </div>
     </div>
     <div class="poa-footer clearfloat">
@@ -52,7 +62,7 @@ export default {
       headerObj: {
         backShow: true,
         titleShow: true,
-        titleContent: 'Place Order'
+        titleContent: '确认订单'
       },
       productList: [
         {
@@ -83,8 +93,19 @@ export default {
           imgSrc: '../../static/assets/images/intro1.jpg'
         }
       ],
-      totalPrice: 0
+      productFee: 0,
+      expressFee: 8,
+      totalPrice: 0,
+      deliveryAddress: {
+        name: '1',
+        address: '1',
+        id: '1',
+        tel: '1'
+      }
     }
+  },
+  created () {
+    this.deliveryAddress = JSON.parse(sessionStorage.getItem('deliveryAddress')) ? JSON.parse(sessionStorage.getItem('deliveryAddress')) : this.deliveryAddress
   },
   mounted () {
     this.calToalPrice()
@@ -92,8 +113,9 @@ export default {
   methods: {
     calToalPrice: function () {
       this.productList.forEach((item, index) => {
-        this.totalPrice += item.quantity * item.price
+        this.productFee += item.quantity * item.price
       })
+      this.totalPrice = this.productFee + this.expressFee
     }
   }
 }
@@ -111,17 +133,19 @@ export default {
         }
         >p{
           height: 3rem;
-          line-height: 3rem;
-          padding-left: 4%;
-          font-size: 1.5rem;
+          position: relative;
+          font-size: 1.4rem;
           border-bottom: 1px solid #e5e5e5;
+          span{
+            left: 12%;
+          }
         }
         .address-detail{
           min-height: 10rem;
           padding: 3%;
           position: relative;
           .selected-address{
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 1.8rem;
             .phone{
               margin-left: 0.5rem;
@@ -137,7 +161,7 @@ export default {
               }
             }
           }
-          >span{
+          .add-address{
             color: #ffffff;
             display: inline-block;
             padding: 0.5rem 3rem;
@@ -155,15 +179,19 @@ export default {
       .order-section{
         >p{
           margin-top: 0.5rem;
+          font-size: 1.4rem;
           height: 3rem;
-          line-height: 3rem;
-          font-size: 1.5rem;
           border-bottom: 1px solid #e5e5e5;
           background-color: #ffffff;
+          position: relative;
           i{
             margin: 0 1rem;
             font-size: 1.8rem;
+            line-height: 3rem;
             vertical-align: middle;
+          }
+          span{
+            left: 20%;
           }
         }
         ul{
@@ -243,6 +271,31 @@ export default {
         width: 33%;
         text-align: center;
         background-color: #feae53;
+      }
+    }
+    .cost-section{
+      margin-top: 0.5rem;
+      padding: 3%;
+      background-color: #ffffff;
+      >p{
+        height: 2.5rem;
+        line-height: 2.5rem;
+        font-size: 1.4rem;
+        >span{
+          >i{
+            margin-left: 0.5rem;
+            font-size: 1.1rem;
+            color: #999999;
+          }
+        }
+        >i{
+          font-size: 1.8rem;
+        }
+      }
+      .express-fee{
+        >i{
+          color: #c74d27;
+        }
       }
     }
   }

@@ -338,6 +338,7 @@ export default {
   .category-area{
     .header-search{
       width: 94%;
+      left: unset;
       margin: 0 auto;
       input{
         height: 3rem;
