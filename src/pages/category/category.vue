@@ -5,7 +5,7 @@
     <!-- 搜索区域 -->
     <div class="header-search">
       <input type="text" placeholder="Que buscas"/>
-      <i class="shopIcon shop-fangdajing-short search-icon"></i>
+      <i class="shopIcon shop-fangdajing-short search-icon absolute-Ycenter"></i>
     </div>
     <div>
       <cascad-menu-components :menus=menus></cascad-menu-components>
@@ -341,12 +341,10 @@ export default {
       left: unset;
       margin: 0 auto;
       input{
-        height: 3rem;
         color: #AFAFAF;
         padding-left: 14%;
       }
       .search-icon{
-        top: 30%;
         color: unset;
         font-size: 1.4rem;
         font-weight: bold;

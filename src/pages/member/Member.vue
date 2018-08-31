@@ -19,68 +19,70 @@
       </div>
     </div>
     <div class="member-area-middle">
-        <p>
-          <span>All Orders</span>
-          <i class="shopIcon shop-jiantouyou float_r"></i>
+      <router-link to="/order">
+        <p class="all-order">
+          <span class="line-center">全部订单</span>
+          <i class="shopIcon shop-jiantouyou absolute-Ycenter"></i>
         </p>
-        <div class="mam-icon-section">
-           <ul>
-              <li>
-                 <p><span class="shopIcon shop-qianbao1"></span></p>
-                 <span>Pending to Pay</span>
-              </li>
-             <li>
-                 <p><span class="shopIcon shop-wuliu"></span></p>
-                 <span>Pending to Deliver</span>
-              </li>
-              <li>
-                 <p><span class="shopIcon shop-xinxi-more-left"><i class="badge-number">12</i></span></p>
-                 <span>Pending to Comment</span>
-              </li>
-              <li>
-                 <p><span class="shopIcon shop-tuihuo"></span></p>
-                 <span>Ruturns and Refunds</span>
-              </li>
-           </ul>
-        </div>
+      </router-link>
+      <div class="mam-icon-section">
+          <ul>
+            <li>
+                <p><span class="shopIcon shop-qianbao1"></span></p>
+                <span>Pending to Pay</span>
+            </li>
+            <li>
+                <p><span class="shopIcon shop-wuliu"></span></p>
+                <span>Pending to Deliver</span>
+            </li>
+            <li>
+                <p><span class="shopIcon shop-xinxi-more-left"><i class="badge-number">12</i></span></p>
+                <span>Pending to Comment</span>
+            </li>
+            <li>
+                <p><span class="shopIcon shop-tuihuo"></span></p>
+                <span>Ruturns and Refunds</span>
+            </li>
+          </ul>
+      </div>
     </div>
     <div class="member-area-bottom">
       <ul>
         <li>
-          <i class="shopIcon shop-weizhi"></i>
-          <span>Delivery address</span>
+          <i class="shopIcon shop-weizhi absolute-Ycenter"></i>
+          <span class="line-center">收获地址</span>
         </li>
         <li>
-          <i class="shopIcon shop-youhuiquan2"></i>
-          <span>My Voucher</span>
+          <i class="shopIcon shop-youhuiquan2 absolute-Ycenter"></i>
+          <span class="line-center">My Voucher</span>
         </li>
         <li>
-          <i class="shopIcon shop-yinxingka"></i>
-          <span>Payment Method</span>
+          <i class="shopIcon shop-yinxingka absolute-Ycenter"></i>
+          <span class="line-center">Payment Method</span>
         </li>
         <li>
-          <i class="shopIcon shop-aixin"></i>
-          <span>My favourite</span>
+          <i class="shopIcon shop-aixin absolute-Ycenter"></i>
+          <span class="line-center">My favourite</span>
         </li>
         <li>
-          <i class="shopIcon shop-zuji"></i>
-          <span>My footprint</span>
+          <i class="shopIcon shop-zuji absolute-Ycenter"></i>
+          <span class="line-center">My footprint</span>
         </li>
         <li>
-          <i class="shopIcon shop-shouyiren"></i>
-          <span>My account</span>
+          <i class="shopIcon shop-shouyiren absolute-Ycenter"></i>
+          <span class="line-center">My account</span>
         </li>
         <li>
-          <i class="shopIcon shop-fuwuerji"></i>
-          <span>Support Shop2home</span>
+          <i class="shopIcon shop-fuwuerji absolute-Ycenter"></i>
+          <span class="line-center">Support Shop2home</span>
         </li>
         <li>
-          <i class="shopIcon shop-bangzhuzixun"></i>
-          <span>Help</span>
+          <i class="shopIcon shop-bangzhuzixun absolute-Ycenter"></i>
+          <span class="line-center">Help</span>
         </li>
         <li>
-          <i class="shopIcon shop-close"></i>
-          <span>Log out</span>
+          <i class="shopIcon shop-close absolute-Ycenter"></i>
+          <span class="line-center">Log out</span>
         </li>
       </ul>
     </div>
@@ -150,7 +152,7 @@ export default {
       -o-transform:rotate(-49deg); /* Opera */
     }
     .shop-kuzi{
-      right: 0.5rem;
+      right: 0.6rem;
       bottom: 0.5rem;
       transform:rotate(49deg);
       -ms-transform:rotate(490deg); /* Internet Explorer */
@@ -209,16 +211,18 @@ export default {
   }
   .member-area-middle{
     background-color: #ffffff;
-    >p{
-        height: 3rem;
-        padding:0 1rem;
-        line-height: 3rem;
-        font-size: 1.4rem;
-        border-bottom: 1px solid #e5e5e5;
-        i{
-           font-size: 1.6rem;
-           color: #999999;
-        }
+    .all-order{
+      font-size: 1.4rem;
+      border-bottom: 1px solid #e5e5e5;
+      position: relative;
+      span{
+        padding-left: 1rem;
+      }
+      i{
+          font-size: 1.6rem;
+          color: #999999;
+          right: 1rem;
+      }
     }
     .mam-icon-section{
         ul{
@@ -249,15 +253,16 @@ export default {
     margin-top: 0.5rem;
     ul{
       li{
-        height: 4rem;
-        line-height: 4rem;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        position: relative;
         border-bottom: 1px solid #e5e5e5;
         i{
           padding-left: 1rem;
           font-size: 1.8rem;
           padding-right: 0.5rem;
-          vertical-align: middle;
+        }
+        >span{
+          padding-left: 3.5rem;
         }
       }
     }

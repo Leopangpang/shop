@@ -6,11 +6,11 @@
     <!-- 回退 -->
     <i v-if="headerObj.backShow" class="shopIcon shop-jiantou-copy absolute-center" @click="back()"></i>
     <!-- 标题 -->
-    <span v-if="headerObj.titleShow" class="header-title absolute-Ycenter absolute-center">{{headerObj.titleContent}}</span>
+    <span v-if="headerObj.titleShow" class="header-title  absolute-center">{{headerObj.titleContent}}</span>
     <!-- 搜索 -->
     <div v-if="headerObj.searchShow" class="absolute-center header-search">
-      <input type="text" placeholder="Que buscas"/>
-      <i class="shopIcon shop-fangdajing-short search-icon"></i>
+      <input type="text" placeholder="商品名称"/>
+      <i class="shopIcon shop-fangdajing-short search-icon absolute-Ycenter"></i>
     </div>
     <!-- 钱包 -->
     <i v-if="headerObj.walletShow" class="shopIcon absolute-center shop-qianbao1">

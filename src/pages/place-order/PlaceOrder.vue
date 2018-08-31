@@ -47,7 +47,7 @@
         <p>总价</p>
         <span> &yen; {{totalPrice}} </span>
       </div>
-      <span class="right">Order now</span>
+      <span class="right">提交订单</span>
     </div>
   </div>
 </template>

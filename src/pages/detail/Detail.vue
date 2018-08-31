@@ -55,16 +55,16 @@
       <!-- 选择区域 -->
       <div class="dab-section select-section">
         <p>
-          <span>Specification & quantity</span>
-          <i>please select</i>
+          <span>规格 & 数量</span>
+          <i class="absolute-Ycenter">请选择</i>
         </p>
         <i class="shopIcon shop-jiantouyou"></i>
       </div>
     </div>
     <!-- 加入购车或者购买 -->
     <div class="footer-section clearfloat">
-      <span class="cart-button float_l">+ Cart</span>
-      <span class="buy-button float_r">Buy</span>
+      <span class="cart-button float_l">+ 购物车</span>
+      <span class="buy-button float_r">购买</span>
     </div>
   </div>
 </template>
@@ -171,9 +171,10 @@ export default {
         margin-bottom: 0.6rem;
         background-color: #FFFFFF;
         >.shopIcon{
-          top: 44%;
+          top: 50%;
           right: 1rem;
           font-size: 1.8rem;
+          transform: translateY(-50%);
           position: absolute;
         }
       }
@@ -245,17 +246,18 @@ export default {
         padding: 0 3%;
         margin-bottom: 0;
         p{
-          line-height: 4rem;
+          position: relative;
           font-size: 1.6rem;
           padding-right: 2.2rem;
           i{
-            float: right;
+            right: 2rem;
             font-size: 1.1rem;
             color: #999999;
           }
-        }
-        .shopIcon{
-          top: 34%;
+          span{
+            padding: 1rem 0;
+            display: inline-block;
+          }
         }
       }
     }
@@ -265,12 +267,12 @@ export default {
       width: 100%;
       position: fixed;
       span{
-        height: 4rem;
-        line-height: 4rem;
         text-align: center;
         font-size: 2rem;
         color: #ffffff;
         width: 50%;
+        padding: 0.5rem 0;
+        display: inline-block;
       }
       .cart-button{
         background-color: #255288;

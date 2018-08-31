@@ -10,8 +10,8 @@
       </div>
       <div class="cc-middle">
         <div class="ccm-header">
-          <i class="shopIcon shop-maichang"></i>
-          <span>LAMECOME</span>
+          <i class="shopIcon shop-maichang absolute-Ycenter"></i>
+          <span class="line-center">京东自营</span>
         </div>
         <div class="ccm-content">
           <ul v-if="productList.length>0">
@@ -42,7 +42,7 @@
         <i v-if="checkAll" @click="selectAll()" class="shopIcon shop-gou-by-circle"></i>
         <span class="total">全选</span>
         <span class="price">总计: <i>&yen; {{totalPrice}}</i></span>
-        <span @click ="goPlaceOrder()" class="checkout-button">Checkout</span>
+        <span @click ="goPlaceOrder()" class="checkout-button">确认订单</span>
       </div>
     <!-- 底部区域 -->
     <footer-components></footer-components>
@@ -197,16 +197,16 @@ export default {
       .cc-middle{
         margin-top: 0.5rem;
         .ccm-header{
-          height: 3rem;
-          line-height: 3rem;
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           padding-left: 3%;
           position: relative;
           background-color: #ffffff;
           i{
             font-size: 1.8rem;
             margin-right: 0.5rem;
-            vertical-align: middle;
+          }
+          span{
+            padding: 0.5rem 2.5rem;
           }
         }
         .ccm-content{
@@ -286,11 +286,10 @@ export default {
       }
     }
      .cc-bottom{
-        height: 4rem;
-        line-height: 4rem;
         position: fixed;
         bottom: 4rem;
         width: 100%;
+        height: 4rem;
         background-color: #ffffff;
         border-top: 1px solid #e5e5e5;
         .shop-gou-by-circle{
@@ -303,13 +302,17 @@ export default {
         }
         .total{
           font-size: 1.1rem;
+          padding: 1rem 0;
           vertical-align: middle;
+          display: inline-block;
         }
         .price{
           font-weight: bold;
           font-size: 1.5rem;
           color: #c74d27;
           margin-left: 10%;
+          padding: 1rem 0;
+          display: inline-block;
           vertical-align: middle;
           i{
             font-size: 1.7rem;
@@ -317,10 +320,12 @@ export default {
         }
         .checkout-button{
           float: right;
+          height: 4rem;
           width: 33%;
           color: #ffffff;
           text-align: center;
           font-size: 1.6rem;
+          padding: 1rem 0;
           background-color: #feae54;
         }
       }
