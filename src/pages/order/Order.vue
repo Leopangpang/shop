@@ -17,14 +17,25 @@
          </ul>
       </div>
       <div class="order-list">
-        <div class="order-detail">
+        <div class="order-detail" v-for="(item, index) of orderList" :key='index'>
           <p class="top clearfloat">
-            <span><i>订单号:</i>7851565646545</span>
-            <span class="status absolute-Ycenter">已完成</span>
+            <span><i>订单号:</i>{{item.orderNum}}</span>
+            <span class="status absolute-Ycenter">{{item.status}}</span>
             <i class="shopIcon shop-shanchu absolute-Ycenter"></i>
           </p>
-          <div class="middle">
-            <img src="../../assets/images/intro1.jpg"/>
+          <div class="middle clearfloat">
+            <van-swipe  :show-indicators="false" :loop="false" >
+              <van-swipe-item style="width:8rem;padding: 0 1rem;transform: translateX(0)" v-for="(imgItem, indexNum) of item.imgSrc" :key='indexNum'>
+                <img :src="imgItem"/>
+              </van-swipe-item>
+            </van-swipe>
+          </div>
+          <div class="bottom">
+            <p class="clearfloat"><span>共{{item.quantity}}件商品  实付款:<i>&yen;{{item.totalPrice}}</i></span></p>
+            <div class="todo clearfloat">
+              <span class="selected">再次购买</span>
+              <span>卖了换钱</span>
+            </div>
           </div>
         </div>
       </div>
@@ -34,10 +45,13 @@
   </div>
 </template>
 <script>
+import { Swipe, SwipeItem } from 'vant'
 import HeaderComponents from '../../components/header-components/header-components'
 import FooterComponents from '../../components/footer-components/footer-components'
 export default {
   components: {
+    [Swipe.name]: Swipe,
+    [SwipeItem.name]: SwipeItem,
     HeaderComponents: HeaderComponents,
     FooterComponents: FooterComponents
   },
@@ -49,6 +63,28 @@ export default {
         askShow: true,
         titleContent: '订单列表'
       },
+      orderList: [
+        {
+          orderNum: 12564686625645,
+          status: 1,
+          imgSrc: [
+            '../../static/assets/images/product1.jpg',
+            '../../static/assets/images/intro1.jpg',
+            '../../static/assets/images/product1.jpg'
+          ],
+          quantity: 5,
+          totalPrice: 454
+        },
+        {
+          orderNum: 968654,
+          status: 2,
+          imgSrc: [
+            '../../static/assets/images/product1.jpg'
+          ],
+          quantity: 2,
+          totalPrice: 126
+        }
+      ],
       isAllShow: false,
       isWaitPayShow: false,
       isWaitDeliveryShow: false,
@@ -126,8 +162,9 @@ export default {
       }
     }
     .order-list{
-      background-color: #FFFFFF;
       .order-detail{
+        margin-top: 0.5rem;
+        background-color: #FFFFFF;
         .top{
           font-size: 1.4rem;
           position: relative;
@@ -154,14 +191,48 @@ export default {
           font-size: 1.4rem;
           position: relative;
           background-color: #F2F2F2;
+          padding: 1rem 0;
+          overflow: hidden;
           border-bottom: 1px solid #e5e5e5;
           img{
-            width: 25%;
+            width: 100%;
             box-sizing: border-box;
+            float: left;
             border: 1px solid #e5e5e5;
           }
         }
+        .bottom{
+          span{
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            float: right;
+            margin-right: 3%;
+            i{
+              margin-left: 0.5rem;
+              font-size: 1.6rem;
+            }
+          }
+          .todo{
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0.8rem 0;
+            span{
+              border: 1px solid #e5e5e5;
+              padding: 0.5rem 1rem;
+              border-radius: 1.2rem;
+              display: inline-block;
+            }
+            .selected{
+              color: #c74d27;
+              border-color: #c74d27;
+            }
+          }
+        }
       }
+    }
+    .van-swipe{
+      width: 10rem;
+      overflow: unset;
     }
   }
 </style>
