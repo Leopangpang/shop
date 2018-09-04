@@ -3,10 +3,14 @@
     <!-- 头部区域 -->
     <header-components :header-obj="headerObj"></header-components>
     <div class="car-content">
-      <div class="cc-top clearfloat">
+      <div v-show="tipShow" class="cc-top clearfloat">
         <i class="float_l shopIcon shop-lingdang"></i>
-        <span class="word-nowrap"><i class="basic-orange-color">Pay and Deliverry</i> and <i class="basic-orange-color">flex billing</i> are supported.</span>
-        <i class="float_r shopIcon shop-guanbi"></i>
+        <span class="word-nowrap">
+          <van-notice-bar>
+            足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。
+          </van-notice-bar>
+        </span>
+        <i @click="closeTip()" class="float_r shopIcon shop-guanbi"></i>
       </div>
       <div class="cc-middle">
         <div class="ccm-header">
@@ -49,10 +53,12 @@
   </div>
 </template>
 <script>
+import { NoticeBar } from 'vant'
 import FooterComponents from '../../components/footer-components/footer-components'
 import HeaderComponents from '../../components/header-components/header-components'
 export default {
   components: {
+    [NoticeBar.name]: NoticeBar,
     FooterComponents: FooterComponents,
     HeaderComponents: HeaderComponents
   },
@@ -93,7 +99,8 @@ export default {
         }
       ],
       checkAll: false,
-      totalPrice: 0
+      totalPrice: 0,
+      tipShow: true
     }
   },
   methods: {
@@ -148,12 +155,29 @@ export default {
     // 跳转到确认订单页
     goPlaceOrder: function () {
       this.$router.push({path: '/placeOrder'})
+    },
+    // 关闭通知提示栏
+    closeTip: function () {
+      this.tipShow = false
     }
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   .car-area{
+    header{
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .van-notice-bar{
+      color: #feae54;
+      background-color: unset;
+      font-size: 1.1rem;
+      padding: 0 1.4rem;
+    }
+    .van-notice-bar__wrap{
+      height: 3rem;
+      line-height: 3rem;
+    }
     .select-all{
       width: 1.3rem;
       height: 1.3rem;
@@ -177,7 +201,7 @@ export default {
         height: 3rem;
         line-height: 3rem;
         color: #ffffff;
-        padding: 0 3%;
+        padding:0 3%;
         font-size: 1.3rem;
         background: -webkit-linear-gradient(right, #77a1d4, #255288);  /* Safari 5.1 - 6.0 77a1d4 */
         background: -o-linear-gradient(right,#77a1d4, #255288);  /* Opera 11.1 - 12.0 */
@@ -190,7 +214,7 @@ export default {
           padding-right: 1%;
         }
         >span{
-          width: 85%;
+          width: 86%;
           display: inline-block;
         }
       }

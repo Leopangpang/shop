@@ -20,8 +20,8 @@
         <div class="order-detail" v-for="(item, index) of orderList" :key='index'>
           <p class="top clearfloat">
             <span><i>订单号:</i>{{item.orderNum}}</span>
-            <span class="status absolute-Ycenter">{{item.status}}</span>
-            <i class="shopIcon shop-shanchu absolute-Ycenter"></i>
+            <span class="status absolute-Ycenter">{{item.status | orderStatus}}</span>
+            <i @click="deleteOrder(index)" class="shopIcon shop-shanchu absolute-Ycenter"></i>
           </p>
           <div class="middle clearfloat">
             <van-swipe  :show-indicators="false" :loop="false" >
@@ -113,6 +113,17 @@ export default {
         default:
           this.isAllShow = true
       }
+    },
+    deleteOrder: function (index) {
+      this.$dialog.confirm({
+        title: '删除订单',
+        message: '是否删除？'
+      }).then(() => {
+        // 先页面处理删除，后面记得调用后台接口后台也删除？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+        this.orderList.splice(index, 1)
+      }).catch(() => {
+        this.$toast('取消删除')
+      })
     }
   }
 }
@@ -153,6 +164,7 @@ export default {
             padding: 1rem 0;
             box-sizing: border-box;
             display: inline-block;
+            border-bottom: 2px solid #ffffff;
           }
         }
         .selected{

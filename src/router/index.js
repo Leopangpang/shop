@@ -1,17 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/index/Index'
-import Category from '@/pages/category/Category'
-import Detail from '@/pages/detail/Detail'
-import Member from '@/pages/member/Member'
-import Car from '@/pages/car/Car'
-import PlaceOrder from '@/pages/place-order/PlaceOrder'
-import AddressList from '@/pages/address-list/AddressList'
-import Address from '@/pages/address/Address'
-import Order from '@/pages/order/Order'
 Vue.use(Router)
 
-export default new Router({
+const vueRouter = new Router({
   routes: [
     {
       path: '/',
@@ -20,47 +11,70 @@ export default new Router({
     {
       path: '/index',
       name: 'Index',
-      component: Index
+      component: (resolve) => require(['../pages/index/Index.vue'], resolve)
     },
     {
       path: '/category',
       name: 'Category',
-      component: Category
+      component: (resolve) => require(['../pages/category/Category.vue'], resolve)
     },
     {
       path: '/detail/:id',
       name: 'Detail',
-      component: Detail
+      component: (resolve) => require(['../pages/detail/Detail.vue'], resolve)
     },
     {
       path: '/member',
       name: 'Member',
-      component: Member
+      component: (resolve) => require(['../pages/member/Member.vue'], resolve),
+      meta: { requiresAuth: false }
     },
     {
       path: '/car',
       name: 'Car',
-      component: Car
+      component: (resolve) => require(['../pages/car/Car.vue'], resolve)
     },
     {
       path: '/placeOrder',
       name: 'PlaceOrder',
-      component: PlaceOrder
+      component: (resolve) => require(['../pages/place-order/PlaceOrder.vue'], resolve)
     },
     {
       path: '/addressList',
       name: 'AddressList',
-      component: AddressList
+      component: (resolve) => require(['../pages/address-list/AddressList.vue'], resolve),
+      meta: { requiresAuth: false }
     },
     {
       path: '/address',
       name: 'Address',
-      component: Address
+      component: (resolve) => require(['../pages/address/Address.vue'], resolve),
+      meta: { requiresAuth: false }
     },
     {
       path: '/order',
       name: 'Order',
-      component: Order
+      component: (resolve) => require(['../pages/order/Order.vue'], resolve),
+      meta: { requiresAuth: false }
     }
   ]
 })
+
+vueRouter.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // this route requires auth, check if logged in
+    // if not, redirect to login page.
+    if (!localStorage.getItem('token')) {
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath }
+      })
+    } else {
+      next()
+    }
+  } else {
+    next() // 确保一定要调用 next()
+  }
+})
+
+export default vueRouter

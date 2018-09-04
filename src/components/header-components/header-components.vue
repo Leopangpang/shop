@@ -9,7 +9,7 @@
     <span v-if="headerObj.titleShow" class="header-title  absolute-center">{{headerObj.titleContent}}</span>
     <!-- 搜索 -->
     <div v-if="headerObj.searchShow" class="absolute-center header-search">
-      <input type="text" placeholder="商品名称"/>
+      <input  type="text" placeholder="商品名称"/>
       <i class="shopIcon shop-fangdajing-short search-icon absolute-Ycenter"></i>
     </div>
     <!-- 钱包 -->

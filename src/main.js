@@ -5,11 +5,18 @@ import App from './App'
 import router from './router'
 import './assets/icon/iconfont.css'
 import './styles/common.css'
-import { Badge, BadgeGroup, Toast } from 'vant'
+import directive from './directive/directive'
+import filter from './filter/filter'
+import { Badge, BadgeGroup, Toast, Dialog } from 'vant'
+import axios from './axios/http.js'
 Vue.config.productionTip = false
+Vue.prototype.$axios = axios
 Vue.use(Badge)
 Vue.use(BadgeGroup)
 Vue.use(Toast)
+Vue.use(Dialog)
+Vue.use(directive)
+Vue.use(filter)
 
 /* eslint-disable no-new */
 new Vue({
