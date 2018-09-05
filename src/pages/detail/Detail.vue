@@ -63,7 +63,7 @@
     </div>
     <!-- 加入购车或者购买 -->
     <div class="footer-section clearfloat">
-      <span class="cart-button float_l">+ 购物车</span>
+      <span @click="addToCar()" class="cart-button float_l">+ 购物车</span>
       <span class="buy-button float_r">购买</span>
     </div>
   </div>
@@ -81,10 +81,12 @@ export default {
     return {
       // 虚构product的数据，有这里得从后台请求获得
       product: {
+        id: '1',
         name: '欧洲经典式手表',
         newPrice: 234,
         oldPrice: 666,
         savingTip: 29,
+        size: 'Black, XXXL, xmas pck',
         imgArray: [
           {
             imgSrc: '../../static/assets/images/intro1.jpg'
@@ -111,6 +113,27 @@ export default {
   created () {
     // let productId = this.$route.params
     // 这里以后通过productId查询商品的信息 ？？？？？？？？？？？？？？？？？？？？？？？？？？？？别忘记了
+  },
+  methods: {
+    // 加入购物车（这里到时候得改成上面获取的商品对象）
+    addToCar: function () {
+      let productDetail = {
+        id: this.product.id,
+        price: this.product.newPrice,
+        size: this.product.size,
+        quantity: 1,
+        imgSrc: this.product.imgArray[0].imgSrc
+      }
+      // 从localStorage中获取购物车car的内容，如果没有则新建car数组
+      let localCar = JSON.parse(localStorage.getItem('car'))
+      if (!localCar) {
+        localCar = []
+      }
+      // 这里到时候得做个判断，如果重复操作的判断??????????????????????????????????????
+      localCar.push(productDetail)
+      localStorage.setItem('car', JSON.stringify(localCar))
+      this.$toast('加入购物车成功')
+    }
   }
 }
 </script>

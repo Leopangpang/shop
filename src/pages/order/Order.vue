@@ -98,16 +98,16 @@ export default {
       this.isWaitDeliveryShow = false
       this.isFinishedShow = false
       switch (index) {
-        case index = 1:
+        case 1:
           this.isAllShow = true
           break
-        case index = 2:
+        case 2:
           this.isWaitPayShow = true
           break
-        case index = 3:
+        case 3:
           this.isWaitDeliveryShow = true
           break
-        case index = 4:
+        case 4:
           this.isFinishedShow = true
           break
         default:

@@ -37,11 +37,14 @@
               </div>
             </li>
           </ul>
-          <div v-else>购物车为空</div>
+          <div v-else class="no-car-section">
+            <span class="shopIcon shop-konggouwuche2"></span>
+            <p>购物车空空如也</p>
+          </div>
         </div>
       </div>
     </div>
-     <div class="cc-bottom">
+     <div v-if="productList.length>0" class="cc-bottom">
         <i  @click="selectAll()" class="select-all" :class="{ changeborder : checkAll }"></i>
         <i v-if="checkAll" @click="selectAll()" class="shopIcon shop-gou-by-circle"></i>
         <span class="total">全选</span>
@@ -69,38 +72,21 @@ export default {
         askShow: true,
         titleContent: 'Car'
       },
-      productList: [
-        {
-          id: 1,
-          name: 'FJ-888asdfasdfasdfasdfasdfadf',
-          price: 10,
-          quantity: 1,
-          imgSrc: '../../static/assets/images/intro1.jpg',
-          size: 'Black, XXXL, xmas pck',
-          status: false
-        },
-        {
-          id: 2,
-          name: '超级手表手表手表手白哦',
-          price: 20,
-          quantity: 1,
-          size: 'Black, XXXL, xmas pck',
-          status: false,
-          imgSrc: '../../static/assets/images/intro1.jpg'
-        },
-        {
-          id: 3,
-          name: '手表手表手表手白哦',
-          price: 3550,
-          size: 'Black, XXXL, xmas pck',
-          status: false,
-          quantity: 20,
-          imgSrc: '../../static/assets/images/intro1.jpg'
-        }
-      ],
+      productList: [],
       checkAll: false,
       totalPrice: 0,
       tipShow: true
+    }
+  },
+  created () {
+    // 取出购物车内容
+    if (localStorage.getItem('car')) {
+      this.productList = JSON.parse(localStorage.getItem('car'))
+      this.productList.forEach((item, index) => {
+        item.status = false
+        this.checkAll = false
+        this.selectAll()
+      })
     }
   },
   methods: {
@@ -304,6 +290,17 @@ export default {
                  position: absolute;
                }
              }
+            }
+          }
+          .no-car-section{
+            color: #feae54;
+            text-align: center;
+            padding: 7rem 0;
+            span{
+              font-size: 12rem;
+            }
+            p{
+              margin-top: 1rem;
             }
           }
         }
